@@ -97,9 +97,16 @@ body {
 
   <div class="main">
     
-    <div class="w3-container">
-      <input type="button" class="w3-button w3-blue" value="Input Button">
-    </div>
+    <input id='fileid' type='file' hidden/>
+    <input id='buttonid' type='button' value='Upload Picture' />
+    
+    <script>
+      document.getElementById('buttonid').addEventListener('click', openDialog);
+
+      function openDialog() {
+        document.getElementById('fileid').click();
+      }
+    </script>
     
 
     <h2>Enter Data Manually<h2>
