@@ -80,6 +80,23 @@ body {
   background: #ddd;
 }
 
+/* Button */
+.uploadButton {
+  color: white;
+   cursor: pointer;
+  border: 2px solid white;
+  background-color: rgba(69, 140, 255, 255);
+  padding: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  transition: all .1s linear 0s;
+  outline-style: none; 
+}
+  
+.uploadButton:hover {
+  font-weight: 700;
+}
+  
 </style>
 </head>
 <body>
@@ -97,7 +114,16 @@ body {
 
   <div class="main">
 
-    <button type="button" name="Upload Food" onclick="ML-Food()">Upload Food</button>
+    <input id='fileid' type='file' hidden/>
+    <input class="uploadButton" id='uploadButton' type='button' value='Upload Picture of Food' />
+    
+    <script>
+      document.getElementById('buttonid').addEventListener('click', openDialog);
+
+      function openDialog() {
+        document.getElementById('fileid').click();
+      }
+    </script>
 
     <h2>Common Foods (Homemade or Restaurant)</h2>
     <!-- SEARCH BAR -->
