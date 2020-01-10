@@ -3,6 +3,8 @@
 <head>
 <title>Nutrition+</title>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -50,34 +52,12 @@ body {
   color: black;
 }
 
-/* Column container */
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
 
 /* Main column */
 .main {
   background-color: white;
   text-align: center;
   padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
 }
 
 /* Button */
@@ -99,19 +79,20 @@ body {
   
   /* Search Stuff */
   .search-box {
+  
  position: absolute;
- top: 50%;
  left: 50%;
+ top: 46%;
+ 
  transform: translate(-50%, -50%);
  background: #458cff;
  height: 40px;
  border-radius: 40px;
- padding: 10px;
 }
 
 .search-box:hover > .search-txt {
- width: 240px;
- padding: 0 6px;
+ width: 400px;
+ padding: 0 15px;
 }
 
 .search-box:hover > .search-btn {
@@ -135,7 +116,7 @@ body {
 }
 
 .search-btn > i {
- font-size: 30px;
+ font-size: 37px;
 }
 
 .search-txt {
@@ -149,7 +130,6 @@ body {
  transition: 0.4s;
  line-height: 40px;
  width: 0px;
- font-weight: bold;
 }
   
 </style>
@@ -184,18 +164,13 @@ body {
     
     <div class="search-box">
       <input type="text" name="" class="search-txt"/>
-        <a class="search-btn" href="#">
-          <i class="fas fa-search"></i>
+        <a class="search-btn" href="index">
+          <i class="material-icons">search</i>
         </a>
     </div>
 
 
   </div>
-
-
-<div class="footer">
-  <h4>Made by AMPNR Epic</h4>
-</div>
 
 </body>
 </html>
