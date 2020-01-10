@@ -79,6 +79,22 @@ body {
   text-align: center;
   background: #ddd;
 }
+  /* Button */
+  .uploadButton {
+   cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--c2);
+  padding: 30px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  transition: all .1s linear 0s;
+  outline-style: none; 
+  }
+  
+.uploadButton:hover {
+  font-weight: 700;
+}
   
 </style>
 </head>
@@ -98,7 +114,7 @@ body {
   <div class="main">
     
     <input id='fileid' type='file' hidden/>
-    <input id='buttonid' type='button' value='Upload Picture' />
+    <input id='uploadButton' type='button' value='Upload Picture' />
     
     <script>
       document.getElementById('buttonid').addEventListener('click', openDialog);
