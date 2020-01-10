@@ -98,35 +98,58 @@ body {
 }
   
   /* Search Stuff */
-  form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
+  .search-box {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #458cff;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
 }
 
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
+.search-box:hover > .search-txt {
+ width: 240px;
+ padding: 0 6px;
 }
 
-form.example button:hover {
-  background: #0b7dda;
+.search-box:hover > .search-btn {
+ background: white;
+ color: #458cff;
 }
 
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+.search-btn {
+ color: #458cff;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #458cff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search-btn > i {
+ font-size: 30px;
+}
+
+.search-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
 }
   
 </style>
@@ -159,10 +182,12 @@ form.example::after {
 
     <h2>Common Foods (Homemade or Restaurant)</h2>
     
-    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-      <input type="text" placeholder="<em>Search...</em>" name="index">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <div class="search-box">
+      <input type="text" name="" class="search-txt"/>
+        <a class="search-btn" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+    </div>
 
 
   </div>
